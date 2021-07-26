@@ -3,6 +3,7 @@ definitions:
     properties:
       body:
         description: a rich body for blog
+        example: body
         type: string
       id:
         description: blog identify
@@ -10,6 +11,7 @@ definitions:
         type: integer
       title:
         description: title of blog
+        example: title
         type: string
     type: object
 host: petstore.swagger.io

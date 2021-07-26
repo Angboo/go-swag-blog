@@ -76,7 +76,8 @@ var doc = `{
             "properties": {
                 "body": {
                     "description": "a rich body for blog",
-                    "type": "string"
+                    "type": "string",
+                    "example": "body"
                 },
                 "id": {
                     "description": "blog identify",
@@ -85,7 +86,8 @@ var doc = `{
                 },
                 "title": {
                     "description": "title of blog",
-                    "type": "string"
+                    "type": "string",
+                    "example": "title"
                 }
             }
         }

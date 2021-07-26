@@ -24,9 +24,9 @@ type blogResponse struct {
 	// blog identify
 	Id    int64  `json:"id" example:"10086"`
 	// title of blog
-	Title string `json:"title"`
+	Title string `json:"title" example:"title"`
 	// a rich body for blog
-	Body  string `json:"body"`
+	Body  string `json:"body" example:"body"`
 }
 
 func newBlogResponse(blog *blog.Blog) blogResponse {
