@@ -1,0 +1,53 @@
+definitions:
+  controller.blogResponse:
+    properties:
+      body:
+        description: a rich body for blog
+        type: string
+      id:
+        description: blog identify
+        example: 10086
+        type: integer
+      title:
+        description: title of blog
+        type: string
+    type: object
+host: petstore.swagger.io
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: This is a sample server Blog server.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Blog Service Swagger API
+  version: "1.0"
+paths:
+  /blogs/{id}:
+    get:
+      consumes:
+      - application/json
+      description: get blog by ID
+      operationId: get-blog-by-id
+      parameters:
+      - description: Blog ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controller.blogResponse'
+        "404":
+          description: ""
+        "500":
+          description: ""
+      summary: Show a blog
+swagger: "2.0"
